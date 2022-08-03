@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Beranda</title>
+  <title>Halaman Admin - Data</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -50,13 +50,10 @@
           <!-- Left navbar links -->
           <ul class="navbar-nav">
             <li class="nav-item d-none d-sm-inline-block active">
-              <a href="<?=site_url('User/beranda')?>" class="nav-link"><b>Beranda</b></a>
+              <a href="<?=site_url('Admin/data_soal')?>" class="nav-link"><b>Download Soal</b></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-              <a href="<?=site_url('User/upload_soal')?>" class="nav-link"><b>Upload Soal</b></a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-              <a href="<?=site_url('User/download_soal')?>" class="nav-link"><b>Download Soal</b></a>
+              <a href="<?=site_url('Admin/kelola_soal')?>" class="nav-link"><b>Kelola Soal</b></a>
             </li>
           </ul>
 
@@ -95,7 +92,7 @@
                 <i class="far fa-user-circle"></i>
               </a>
               <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                <a href="<?=site_url('Admin/login')?>" class="dropdown-item">
+                <a href="#" class="dropdown-item">
                   <i class="fas fa-user mr-2"></i>
                   <span class="float-right text-muted text-sm">LOGIN</span>
                 </a>
@@ -108,14 +105,70 @@
   </div>
 
   <!-- Body -->
-  <div class="container" style="margin-top: 180px;margin-bottom: 80px;">
+  <div class="container" style="margin-top: 180px;margin-bottom: 80px;"> 
     <div class="card">
-      <img src="<?=base_url()?>assets/dist/img/no-image.png" style="width: 1100px;margin: auto;margin-top: 40px;margin-bottom: 40px;">
-      <div class="card-body text-center" style="margin: auto;margin-bottom: 20px;">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit illo repellendus nobis ab blanditiis, in tenetur porro alias assumenda et cumque nesciunt expedita ea aut, suscipit, ut inventore quas quasi!
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta non fugit sequi suscipit iure quaerat aliquam accusamus dicta ab nemo, doloremque necessitatibus autem facere rem vitae ipsum pariatur eos. Cum.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo harum, eveniet, error exercitationem nesciunt officia molestias reiciendis neque doloremque placeat culpa, adipisci sapiente quod corporis consequuntur cupiditate nam in dicta.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere architecto quidem vitae perspiciatis sapiente ab, minima magnam eum totam doloribus eveniet? Natus et voluptatum nostrum error maxime suscipit doloribus aspernatur?
+      <div class="card-header">
+        <h3 class="card-title">Data Soal</h3>
+
+        <div class="card-tools">
+          <div class="input-group input-group-sm" style="width: 150px;">
+            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-default">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nama Mata Kuliah</th>
+              <th>Nama Dosen Pengampu</th>
+              <th>Semester</th>
+              <th>Tahun Ajaran</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>DDP</td>
+              <td>DEWI PRAMUDI ISMI</td>
+              <td>SEMESTER 1</td>
+              <td>2018-2019</td>
+              <td><a class="btn btn-primary text-center"><i class="fas fa-download"></i></a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>DDP</td>
+              <td>DEWI PRAMUDI ISMI</td>
+              <td>SEMESTER 1</td>
+              <td>2019-2020</td>
+              <td><a class="btn btn-primary text-center"><i class="fas fa-download"></i></a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Algoritma Pemrograman</td>
+              <td>DEWI PRAMUDI ISMI</td>
+              <td>SEMESTER 2</td>
+              <td>2018-2019</td>
+              <td><a class="btn btn-primary text-center"><i class="fas fa-download"></i></a></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Pemrograman Web</td>
+              <td></td>
+              <td>SEMESTER 2</td>
+              <td>2018-2019</td>
+              <td><a class="btn btn-primary text-center"><i class="fas fa-download"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

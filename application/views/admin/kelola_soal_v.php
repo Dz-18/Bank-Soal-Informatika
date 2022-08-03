@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Beranda</title>
+  <title>Halaman Admin - Data</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -49,14 +49,11 @@
         <div class="container">
           <!-- Left navbar links -->
           <ul class="navbar-nav">
+            <li class="nav-item d-none d-sm-inline-block">
+              <a href="<?=site_url('Admin/data_soal')?>" class="nav-link"><b>Download Soal</b></a>
+            </li>
             <li class="nav-item d-none d-sm-inline-block active">
-              <a href="<?=site_url('User/beranda')?>" class="nav-link"><b>Beranda</b></a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-              <a href="<?=site_url('User/upload_soal')?>" class="nav-link"><b>Upload Soal</b></a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-              <a href="<?=site_url('User/download_soal')?>" class="nav-link"><b>Download Soal</b></a>
+              <a href="<?=site_url('Admin/kelola_soal')?>" class="nav-link"><b>Kelola Soal</b></a>
             </li>
           </ul>
 
@@ -95,7 +92,7 @@
                 <i class="far fa-user-circle"></i>
               </a>
               <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                <a href="<?=site_url('Admin/login')?>" class="dropdown-item">
+                <a href="#" class="dropdown-item">
                   <i class="fas fa-user mr-2"></i>
                   <span class="float-right text-muted text-sm">LOGIN</span>
                 </a>
@@ -109,13 +106,51 @@
 
   <!-- Body -->
   <div class="container" style="margin-top: 180px;margin-bottom: 80px;">
-    <div class="card">
-      <img src="<?=base_url()?>assets/dist/img/no-image.png" style="width: 1100px;margin: auto;margin-top: 40px;margin-bottom: 40px;">
-      <div class="card-body text-center" style="margin: auto;margin-bottom: 20px;">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit illo repellendus nobis ab blanditiis, in tenetur porro alias assumenda et cumque nesciunt expedita ea aut, suscipit, ut inventore quas quasi!
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta non fugit sequi suscipit iure quaerat aliquam accusamus dicta ab nemo, doloremque necessitatibus autem facere rem vitae ipsum pariatur eos. Cum.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo harum, eveniet, error exercitationem nesciunt officia molestias reiciendis neque doloremque placeat culpa, adipisci sapiente quod corporis consequuntur cupiditate nam in dicta.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere architecto quidem vitae perspiciatis sapiente ab, minima magnam eum totam doloribus eveniet? Natus et voluptatum nostrum error maxime suscipit doloribus aspernatur?
+    <div class="row">
+      <div class="col">
+        <div class="card card-secondary">
+          <div class="card-header text-center">
+            <h1 class="text center"><b>UPLOAD KELOLA SOAL</b></h1>
+          </div>
+          <form>
+            <div class="card-body">
+              <div class="form-group">
+                <label>Semester</label>
+                <select name="semester" class="form-select form-control">
+                  <option value="-">-</option>
+                  <option value="1">Semester 1</option>
+                  <option value="2">Semester 2</option>
+                  <option value="3">Semester 3</option>
+                  <option value="4">Semester 4</option>
+                  <option value="5">Semester 5</option>
+                  <option value="6">Semester 6</option>
+                  <option value="7">Semester 7</option>
+                  <option value="8">Semester 8</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Tahun Ajaran</label>
+                <input type="text" class="form-control" name="tahun_ajaran" placeholder="Masukan Tahun Ajaran (ex: 2021-2022)">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputFile">File Soal</label>
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="file_soal">
+                    <label class="custom-file-label" for="exampleInputFile">Pilih file</label>
+                  </div>
+                  <div class="input-group-append">
+                    <span class="input-group-text">Upload</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-footer float-right">
+              <button type="submit" nama="upload" class="btn btn-primary">Upload</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>

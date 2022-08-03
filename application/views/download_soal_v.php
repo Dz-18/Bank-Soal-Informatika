@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Beranda</title>
+  <title>Download Soal</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -49,13 +49,13 @@
         <div class="container">
           <!-- Left navbar links -->
           <ul class="navbar-nav">
-            <li class="nav-item d-none d-sm-inline-block active">
+            <li class="nav-item d-none d-sm-inline-block">
               <a href="<?=site_url('User/beranda')?>" class="nav-link"><b>Beranda</b></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
               <a href="<?=site_url('User/upload_soal')?>" class="nav-link"><b>Upload Soal</b></a>
             </li>
-            <li class="nav-item d-none d-sm-inline-block">
+            <li class="nav-item d-none d-sm-inline-block active">
               <a href="<?=site_url('User/download_soal')?>" class="nav-link"><b>Download Soal</b></a>
             </li>
           </ul>
@@ -108,14 +108,79 @@
   </div>
 
   <!-- Body -->
-  <div class="container" style="margin-top: 180px;margin-bottom: 80px;">
-    <div class="card">
-      <img src="<?=base_url()?>assets/dist/img/no-image.png" style="width: 1100px;margin: auto;margin-top: 40px;margin-bottom: 40px;">
-      <div class="card-body text-center" style="margin: auto;margin-bottom: 20px;">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit illo repellendus nobis ab blanditiis, in tenetur porro alias assumenda et cumque nesciunt expedita ea aut, suscipit, ut inventore quas quasi!
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta non fugit sequi suscipit iure quaerat aliquam accusamus dicta ab nemo, doloremque necessitatibus autem facere rem vitae ipsum pariatur eos. Cum.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo harum, eveniet, error exercitationem nesciunt officia molestias reiciendis neque doloremque placeat culpa, adipisci sapiente quod corporis consequuntur cupiditate nam in dicta.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere architecto quidem vitae perspiciatis sapiente ab, minima magnam eum totam doloribus eveniet? Natus et voluptatum nostrum error maxime suscipit doloribus aspernatur?
+  <div class="container" style="margin-top: 180px;margin-bottom: 80px;"> 
+  
+    <div class="card card-primary card-tabs">
+      <div class="card-header p-0 pt-1">
+        <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
+          <li class="pt-2 px-3"><h3 class="card-title">Semester</h3></li>
+          <li class="nav-item">
+            <a class="nav-link active" id="custom-tabs-two-home-tab" data-toggle="pill" href="#custom-tabs-two-home" role="tab" aria-controls="custom-tabs-two-home" aria-selected="true">1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-tabs-two-profile-tab" data-toggle="pill" href="#custom-tabs-two-profile" role="tab" aria-controls="custom-tabs-two-profile" aria-selected="false">2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-tabs-two-messages-tab" data-toggle="pill" href="#custom-tabs-two-messages" role="tab" aria-controls="custom-tabs-two-messages" aria-selected="false">3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-tabs-two-settings-tab" data-toggle="pill" href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-settings" aria-selected="false">4</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-tabs-two-settings-tab" data-toggle="pill" href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-settings" aria-selected="false">5</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-tabs-two-settings-tab" data-toggle="pill" href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-settings" aria-selected="false">6</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-tabs-two-settings-tab" data-toggle="pill" href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-settings" aria-selected="false">7</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-tabs-two-settings-tab" data-toggle="pill" href="#custom-tabs-two-settings" role="tab" aria-controls="custom-tabs-two-settings" aria-selected="false">8</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <div class="tab-content" id="custom-tabs-two-tabContent">
+          <div class="tab-pane fade show active" id="custom-tabs-two-home" role="tabpanel" aria-labelledby="custom-tabs-two-home-tab">
+            <table class="table table-hover text-nowrap">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Semester</th>
+                  <th>Tahun Ajaran</th>
+                  <th>Versi Upload</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>SEMESTER 1</td>
+                  <td>2018-2019</td>
+                  <td>1.0</td>
+                  <td><a class="btn btn-primary text-center"><i class="fas fa-download"></i></a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>SEMESTER 1</td>
+                  <td>2019-2020</td>
+                  <td>1.0</td>
+                  <td><a class="btn btn-primary text-center"><i class="fas fa-download"></i></a></td>
+                </tr>
+              </tbody>
+            </table>  
+          </div>
+          <div class="tab-pane fade" id="custom-tabs-two-profile" role="tabpanel" aria-labelledby="custom-tabs-two-profile-tab">
+              Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+          </div>
+          <div class="tab-pane fade" id="custom-tabs-two-messages" role="tabpanel" aria-labelledby="custom-tabs-two-messages-tab">
+              Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt eleifend ac ornare magna.
+          </div>
+          <div class="tab-pane fade" id="custom-tabs-two-settings" role="tabpanel" aria-labelledby="custom-tabs-two-settings-tab">
+              Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -130,6 +195,50 @@
       </div>
     </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- jQuery -->
 <script src="<?=base_url()?>assets/plugins/jquery/jquery.min.js"></script>
